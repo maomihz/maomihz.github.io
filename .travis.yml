@@ -1,0 +1,19 @@
+language: node_js
+node_js: stable
+cache:
+  yarn: true
+  directories:
+  - hexo/
+script:
+- mkdir -p hexo
+- cd hexo
+- git init
+- git fetch --quiet "$RWNHJWBZ" master
+- git reset --hard FETCH_HEAD
+- bash ./run.sh
+branches:
+  only:
+  - hexo
+env:
+  global:
+    secure: JQS3PHmahBW+Ot03T0hpbPswc9d1we1tVX3deGKPxZShLFaA+YrPyXZrlGi44OM9zRxB8f+KSLtxivYP1iwTyD2ydiB+6C9vUQXZLZvJr/gmCy5Kf57oB5dNtgzOrxtqNKSV4iDYzL/1Wmp5cj4NQ/LPJkVte9IPVM3adRSS0zsgl1KApwjYMJX84qF2oNdFSyAdtbK8hHDZQQyGP8KOBH/mbwUGuLAzJFVwzxTohzx+jkZe7Djus6sa6kHWjgcS4wfpAPktm7U0CfuCRV+zV/u0gddbO3ME9vwpXyhlJ4RZ8jbVCt6ydO+v8Jqy49P1fC+v9uqL/jbn+QSJn1u6UMHl09S3uzbZe+2zlfUF34XRMXV4ZNhwk8frqSi/jUn3hUgv0iUQcyQ0u/4JROopX8M9TBApq19psGd7+/t3SSSStSH7JYw70Efh9ZPtIs8mRBZJeJ3tHMBfWXL/yhHiJ7DbcYI5Dhqc38mijDd90t7vLsj3O9Xh+g07RqpQwXIsP9FOwtJcPKYAvA86vEsm5VgteXVTSce3+JIRZYTCf2sLSYTBFhlTqRdxXnzAw2ke1KUd5zoY4AI39vVH/wmBg8uiXutCtKRxYxfs1FFY1XMfIZnpaW0p3JrIoGUCqnM7nCV8nhjcC+nfQjU1zLVb2C6Y0LngRmqGfZXFdjJYhfM=
